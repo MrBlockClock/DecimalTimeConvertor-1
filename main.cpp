@@ -19,12 +19,12 @@ int main() {
     double decimal_hour = decimal_Minutes / 60;
     int hours = (floor (decimal_Minutes)) / 60 ;
     double minutesRemaining = decimal_hour - hours;
-    int minutes = (minutesRemaining * 100) *.60;
-    double secondsRemaining = minutes - minutesRemaining ;
-
+    int minutes = (minutesRemaining) *60;
+    double secondsRemaining = (decimal_hour - hours) * 60;
+    double seconds = (secondsRemaining - minutes) * 60;
  // stringstream(timeValues)>> decimal_minutes;
 
-    cout << "\nTime in Hours : " << hours << " Hours " << minutes << " Minutes " << secondsRemaining << " Seconds " ;
+    cout << "\nTime in Hours : " << hours << " Hours " << minutes << " Minutes " << seconds << " Seconds " ;
 
   return 0;
 }
